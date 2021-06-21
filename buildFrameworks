@@ -91,47 +91,47 @@ buildAdaptor()
 
 chooseAdaptor()
 {
-    FINISHED=0
-    while [ $FINISHED -lt 1 ]; do
-        echo ""
-        PS3="Choose a Database Adaptor to compile/install "
-    	options=(
-        "Oracle"
-        "MySQL"
-        "SQLite"
-        "PostgreSQL"
-        "OpenBase"
-        "Done" 
-        )
+    # FINISHED=0
+    # while [ $FINISHED -lt 1 ]; do
+    #     echo ""
+    #     PS3="Choose a Database Adaptor to compile/install "
+    # 	options=(
+    #     "Oracle"
+    #     "MySQL"
+    #     "SQLite"
+    #     "PostgreSQL"
+    #     "OpenBase"
+    #     "Done" 
+    #     )
 
-    	select option in "${options[@]}"; do
-        	case "$REPLY" in 
-            	1) 
+    # 	select option in "${options[@]}"; do
+    #     	case "$REPLY" in 
+    #         	1) 
                    ADAPTOR_TARGET=Oracle 
                    buildAdaptor 
-                   break ;;
-            	2) 
-                   ADAPTOR_TARGET=MySQL 
-                   buildAdaptor 
-                   break ;;
-                3) 
-				   ADAPTOR_TARGET=SQLite 
-                   buildAdaptor 
-                   break ;;
-                4)
-				   ADAPTOR_TARGET=PostgreSQL 
-                   buildAdaptor 
-                   break ;;
-                5)
-				   ADAPTOR_TARGET=OpenBase 
-                   buildAdaptor 
-                   break ;;
-            	6) 
-                    FINISHED=1
-                    break ;;
-        	esac
-    	done
-    done
+    #                break ;;
+    #         	2) 
+    #                ADAPTOR_TARGET=MySQL 
+    #                buildAdaptor 
+    #                break ;;
+    #             3) 
+	# 			   ADAPTOR_TARGET=SQLite 
+    #                buildAdaptor 
+    #                break ;;
+    #             4)
+	# 			   ADAPTOR_TARGET=PostgreSQL 
+    #                buildAdaptor 
+    #                break ;;
+    #             5)
+	# 			   ADAPTOR_TARGET=OpenBase 
+    #                buildAdaptor 
+    #                break ;;
+    #         	6) 
+    #                 FINISHED=1
+    #                 break ;;
+    #     	esac
+    # 	done
+    # done
 } 
 
 sanityCheck()
